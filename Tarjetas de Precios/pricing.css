@@ -10,6 +10,10 @@ body{
     --gray-border: #E3E3E3;
     --black-text: #000000;
 }
+.section-header{
+    text-align: center;
+
+}
 .pricing {
     padding: 10px;
     padding-bottom: 30px;
