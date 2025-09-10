@@ -25,11 +25,9 @@
  }
 
  .logo {
-     font-size: 1.8rem;
-     font-weight: 600;
-     color: #d4a574;
-     text-decoration: none;
-     letter-spacing: 0.5px;
+max-width: 40px;
+max-height: 20px;
+
  }
 
  .nav-links {
