@@ -3,7 +3,8 @@
      padding: 0;
      box-sizing: border-box;
  }
-/* inicio del codigo del header*/
+
+ /* inicio del codigo del header*/
  body {
      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
      background-color: #f8f9fa;
@@ -25,9 +26,20 @@
  }
 
  .logo {
-max-width: 40px;
-max-height: 20px;
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+ }
 
+ .logo img {
+     height: 50px;
+     /* Altura fija para la imagen */
+     width: auto;
+     /* Mantener proporción */
+     max-width: 200px;
+     /* Ancho máximo para evitar que sea muy grande */
+     object-fit: contain;
+     /* Mantener proporción sin distorsión */
  }
 
  .nav-links {
@@ -106,4 +118,5 @@ max-height: 20px;
          font-size: 0.85rem;
      }
  }
+
  /*Final del codigo del header*/
