@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Dropdown</title>
+    <link rel="stylesheet" href="dropdown_header.css">
+</head>
+<body>
+    <!-- Inicio del codigo del header-->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2L2 7v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7l-10-5z"/>
+                    <path d="M12 8v8m-4-4l4-4 4 4"/>
+                </svg>
+            </a>
+            
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Product
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-item">
+                            <div class="dropdown-icon">📊</div>
+                            <div class="dropdown-content">
+                                <h3>Analytics</h3>
+                                <p>Get a better understanding of your traffic</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="dropdown-item">
+                            <div class="dropdown-icon">✨</div>
+                            <div class="dropdown-content">
+                                <h3>Engagement</h3>
+                                <p>Speak directly to your customers</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="dropdown-item">
+                            <div class="dropdown-icon">🔒</div>
+                            <div class="dropdown-content">
+                                <h3>Security</h3>
+                                <p>Your customers' data will be safe and secure</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="dropdown-item">
+                            <div class="dropdown-icon">🔧</div>
+                            <div class="dropdown-content">
+                                <h3>Integrations</h3>
+                                <p>Connect with third-party tools</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="dropdown-item">
+                            <div class="dropdown-icon">🔄</div>
+                            <div class="dropdown-content">
+                                <h3>Automations</h3>
+                                <p>Build strategic funnels that will convert</p>
+                            </div>
+                        </a>
+                        
+                        <div class="dropdown-footer">
+                            <a href="#" class="dropdown-btn btn-secondary">
+                                ▶ Watch demo
+                            </a>
+                            <a href="#" class="dropdown-btn btn-primary">
+                                📞 Contact sales
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="#" class="nav-link">Features</a></li>
+                <li><a href="#" class="nav-link">Marketplace</a></li>
+                
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Company
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <a href="#" class="login-btn">
+                Log in →
+            </a>
+        </nav>
+    </header>
+    <!-- final del codigo del header-->
+</body>
+</html>

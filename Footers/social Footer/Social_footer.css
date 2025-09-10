@@ -1,0 +1,135 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .footer {
+            width: 100%;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #2563eb 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 15px 0;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+                        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%), 
+                        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            opacity: 0.3;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        .footer-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .footer-links a.dropdown::after {
+            content: '↗';
+            margin-left: 5px;
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-links a.dropdown:hover::after {
+            transform: rotate(45deg);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 12px;
+            margin-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .social-links {
+                order: -1;
+            }
+
+            .copyright {
+                margin-left: 0;
+                text-align: center;
+            }
+        }
