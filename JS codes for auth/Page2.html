@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Propiedades Premium</title>
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <script src="nav.js"></script>
+    <!-- Header -->
+    <header class="header">
+        <a href="Page1.html" class="back-btn" onclick="simulateLogin()">
+            ← Regresar al Marketplace
+        </a>
+        <h1>Dashboard</h1>
+        <div class="user-info">
+            👤 Usuario Premium
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Propiedades</div>
+                <a href="#" class="sidebar-item" onclick="showSection('propiedades-vendidas')">Propiedades más
+                    vendidas</a>
+                <a href="#" class="sidebar-item" onclick="showSection('propiedades-subidas')">Propiedades subidas</a>
+                <a href="#" class="sidebar-item" onclick="showSection('todas-propiedades')">Todas las propiedades</a>
+                <a href="#" class="sidebar-item" onclick="showSection('subir-propiedades')">Subir propiedades</a>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Cuenta</div>
+                <a href="#" class="sidebar-item" onclick="showSection('perfil')">Perfil</a>
+                <a href="#" class="sidebar-item" onclick="showSection('planes-premium')">Planes Premium</a>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Configuración</div>
+                <a href="#" class="sidebar-item" onclick="showSection('notificaciones')">Notificaciones</a>
+                <a href="#" class="sidebar-item" onclick="showSection('cambiar-password')">Cambiar contraseña</a>
+                <a href="#" class="sidebar-item" onclick="simulateLogOut()" style="color: #D8AF53;">Cerrar sesión</a>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <main class="content">
+            <!-- Dashboard Overview -->
+            <section id="dashboard-overview" class="content-section active">
+                <h2 class="section-title">Resumen del Dashboard</h2>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Propiedades Activas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Vistas Este Mes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Consultas Recibidas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Ventas Completadas</div>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>🏠 Propiedades Recientes</h3>
+                        <p>Gestiona y visualiza las propiedades que has subido recientemente a la plataforma.</p>
+                    </div>
+                    <div class="card">
+                        <h3>📊 Estadísticas</h3>
+                        <p>Monitorea el rendimiento de tus propiedades con métricas detalladas de visualizaciones.</p>
+                    </div>
+                    <div class="card">
+                        <h3>💰 Ingresos</h3>
+                        <p>Sigue el progreso de tus ventas y comisiones generadas este mes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Propiedades más vendidas -->
+            <section id="propiedades-vendidas" class="content-section">
+                <h2 class="section-title">Propiedades Más Vendidas</h2>
+                <div class="property-item">
+                    <div class="property-image">🏆</div>
+                    <div class="property-details">
+                        <h4>Casa Moderna en Las Condes</h4>
+                        <div class="property-price">$450,000</div>
+                        <div class="property-location">Las Condes, Santiago</div>
+                    </div>
+                </div>
+                <div class="property-item">
+                    <div class="property-image">⭐</div>
+                    <div class="property-details">
+                        <h4>Departamento Vista al Mar</h4>
+                        <div class="property-price">$320,000</div>
+                        <div class="property-location">Viña del Mar</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Propiedades subidas -->
+            <section id="propiedades-subidas" class="content-section">
+                <h2 class="section-title">Mis Propiedades Subidas</h2>
+                <div class="property-item">
+                    <div class="property-image">🏠</div>
+                    <div class="property-details">
+                        <h4>Casa Familiar en Providencia</h4>
+                        <div class="property-price">$380,000</div>
+                        <div class="property-location">Providencia, Santiago</div>
+                    </div>
+                </div>
+                <div class="property-item">
+                    <div class="property-image">🏢</div>
+                    <div class="property-details">
+                        <h4>Oficina Comercial Centro</h4>
+                        <div class="property-price">$150,000</div>
+                        <div class="property-location">Santiago Centro</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Todas las propiedades -->
+            <section id="todas-propiedades" class="content-section">
+                <h2 class="section-title">Todas las Propiedades</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>🏠 Residenciales</h3>
+                        <p>156 propiedades disponibles</p>
+                    </div>
+                    <div class="card">
+                        <h3>🏢 Comerciales</h3>
+                        <p>43 propiedades disponibles</p>
+                    </div>
+                    <div class="card">
+                        <h3>🏭 Industriales</h3>
+                        <p>12 propiedades disponibles</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subir propiedades -->
+            <section id="subir-propiedades" class="content-section">
+                <h2 class="section-title">Subir Nueva Propiedad</h2>
+                <div class="form-group">
+                    <label class="form-label">Título de la Propiedad</label>
+                    <input type="text" class="form-input" placeholder="Ej: Casa moderna con jardín">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Precio</label>
+                    <input type="number" class="form-input" placeholder="Ej: 450000">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Ubicación</label>
+                    <input type="text" class="form-input" placeholder="Ej: Las Condes, Santiago">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Descripción</label>
+                    <textarea class="form-input" rows="4" placeholder="Describe la propiedad..."></textarea>
+                </div>
+                <button class="btn">Publicar Propiedad</button>
+            </section>
+
+            <!-- Perfil -->
+            <section id="perfil" class="content-section">
+                <h2 class="section-title">Mi Perfil</h2>
+                <div class="form-group">
+                    <label class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-input" value="Juan Pérez" placeholder="Tu nombre completo">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" value="juan@email.com" placeholder="tu@email.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Teléfono</label>
+                    <input type="tel" class="form-input" value="+56 9 1234 5678" placeholder="+56 9 xxxx xxxx">
+                </div>
+                <button class="btn">Actualizar Perfil</button>
+            </section>
+
+            <!-- Planes Premium -->
+            <section id="planes-premium" class="content-section">
+                <h2 class="section-title">Planes Premium</h2>
+               <div class="pricing-card">
+            <div class="pricing-header">
+                <h3>Básico</h3>
+                <div class="pricing-price">
+                    <span class="price">Gratis</span>
+                </div>
+            </div>
+            <div class="pricing-features">
+                <ul>
+                    <li>Prueba gratuita de dos semanas</li>
+                    <li>Búsquedas limitadas de propiedades</li>
+                    <li>Acceso básico al marketplace</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Plan Profesional -->
+        <div class="pricing-card featured">
+            <div class="badge">ACTUAL</div>
+            <div class="pricing-header">
+                <h3>Profesional</h3>
+                <div class="pricing-price">
+                    <span class="price">$20</span>
+                    <span class="period">/mes</span>
+                </div>
+            </div>
+            <div class="pricing-features">
+                <ul>
+                    <li>Búsquedas ilimitadas de propiedades</li>
+                    <li>Acceso completo al marketplace</li>
+                    <li>Contacto directo con agentes</li>
+                    <li>Notificaciones personalizadas</li>
+                    <li>Acceso a propiedades premium</li>
+                </ul>
+            </div>
+            <div class="pricing-actions">
+                <button class="btn btn-primary">Plan Actual</button>
+            </div>
+        </div>
+
+        <!-- Plan Ultra -->
+        <div class="pricing-card">
+            <div class="pricing-header">
+                <h3>Ultra</h3>
+                <div class="pricing-price">
+                    <span class="price">$200</span>
+                    <span class="period">/mes</span>
+                </div>
+            </div>
+            <div class="pricing-features">
+                <ul>
+                    <li>20x más propiedades exclusivas</li>
+                    <li>Acceso prioritario a nuevas propiedades</li>
+                    <li>Asesoría personalizada 24/7</li>
+                    <li>Vista previa de propiedades antes del lanzamiento</li>
+                </ul>
+            </div>
+            <div class="pricing-actions">
+                <button class="btn btn-primary">Obtener Ultra</button>
+            </div>
+            </section>
+
+            <!-- Notificaciones -->
+            <section id="notificaciones" class="content-section">
+                <h2 class="section-title">Configuración de Notificaciones</h2>
+                <div class="toggle-group">
+                    <span>Notificaciones por SMS</span>
+                    <div class="toggle active" onclick="toggleNotification(this)"></div>
+                </div>
+                <div class="toggle-group">
+                    <span>Notificaciones por Email</span>
+                    <div class="toggle active" onclick="toggleNotification(this)"></div>
+                </div>
+                <div class="toggle-group">
+                    <span>Alertas de nuevas consultas</span>
+                    <div class="toggle" onclick="toggleNotification(this)"></div>
+                </div>
+                <div class="toggle-group">
+                    <span>Reportes semanales</span>
+                    <div class="toggle active" onclick="toggleNotification(this)"></div>
+                </div>
+            </section>
+
+            <!-- Cambiar contraseña -->
+            <section id="cambiar-password" class="content-section">
+                <h2 class="section-title">Cambiar Contraseña</h2>
+                <div class="form-group">
+                    <label class="form-label">Contraseña Actual</label>
+                    <input type="password" class="form-input" placeholder="Tu contraseña actual">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Nueva Contraseña</label>
+                    <input type="password" class="form-input" placeholder="Nueva contraseña">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Confirmar Nueva Contraseña</label>
+                    <input type="password" class="form-input" placeholder="Confirma tu nueva contraseña">
+                </div>
+                <button class="btn">Cambiar Contraseña</button>
+            </section>
+        </main>
+
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Home Delight</h3>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                        <li><a href="Marketplace.html">Marketplace</a></li>
+                        <li><a href="#prices">Precios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#buy">Comprar</a></li>
+                        <li><a href="#rent">Alquilar</a></li>
+                        <li><a href="#sell">Vender</a></li>
+                        <li><a href="#contact-service">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Lugares</h3>
+                    <ul>
+                        <li><a href="#panama">Panama</a></li>
+                        <li><a href="#colon">Colón</a></li>
+                        <li><a href="#panama-oeste">Panama Oeste</a></li>
+                        <li><a href="#other-locations">Otras Ubicaciones</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#privacy">Privacidad</a>
+                    <a href="#terms">Términos</a>
+                    <a href="#cookies">Cookies</a>
+                    <a href="#legal">Legal</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2025 Home Delight. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Función para mostrar secciones
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Remover clase active de todos los items del sidebar
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            sidebarItems.forEach(item => item.classList.remove('active'));
+
+            // Mostrar la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+
+            // Agregar clase active al item clickeado
+            event.target.classList.add('active');
+        }
+
+        // Función para regresar al marketplace
+        function goToMarketplace() {
+            alert('Redirigiendo al marketplace...');
+            // Aquí iría la lógica para redirigir
+        }
+
+        // Función para cerrar sesión
+        function logout() {
+            if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+                alert('Cerrando sesión...');
+                // Aquí iría la lógica para cerrar sesión
+            }
+        }
+
+        // Función para toggle de notificaciones
+        function toggleNotification(toggle) {
+            toggle.classList.toggle('active');
+        }
+
+        // Función para manejar formularios
+        function handleFormSubmit(formType) {
+            alert(`Formulario de ${formType} enviado correctamente`);
+        }
+
+        // Event listeners para formularios
+        document.addEventListener('DOMContentLoaded', function () {
+            // Agregar event listeners a los botones
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    if (!this.onclick) {
+                        e.preventDefault();
+                        const section = this.closest('.content-section');
+                        const sectionTitle = section.querySelector('.section-title').textContent;
+                        alert(`Acción ejecutada en: ${sectionTitle}`);
+                    }
+                });
+            });
+
+            // Animar entrada de estadísticas
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.style.animation = 'fadeIn 0.5s ease forwards';
+            });
+        });
+
+        // Responsive sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // Cerrar sidebar en mobile cuando se hace click fuera
+        document.addEventListener('click', function (e) {
+            const sidebar = document.querySelector('.sidebar');
+            const isClickInsideSidebar = sidebar.contains(e.target);
+
+            if (!isClickInsideSidebar && window.innerWidth <= 768) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+
+</html>

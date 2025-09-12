@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Header</title>
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <!-- Inicio del codigo del header-->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo"><img src="https://i.ibb.co/Pvw3rSDG/logo.png" alt="thumbnail-Home-Deligth-removebg"></a>
+            <ul class="nav-links">
+                <li><a href="Page2.html" class="inicio">Inicio</a></li>
+                <li><a href="#" class="marketplace">Marketplace</a></li>
+                <li><a href="#" class="contact">Contact Us</a></li>
+                <li><a href="#" class="about">About Us</a></li>
+            </ul>
+            <a href="#" id="authButton"class="Nav-btn">LogIn/Register</a>
+        </nav>
+    </header>
+    <script src="changing_header.js"></script>
+    <!-- final del codigo del header-->
+          <div class="content">
+        <h1>Demo: Authentication Header</h1>
+        <p>This header checks localStorage for user session and updates the navigation button accordingly.</p>
+        
+        <div class="demo-controls">
+            <h3>Demo Controls (for testing purposes)</h3>
+            <p>Use these buttons to simulate login/logout and see how the header changes:</p>
+            <button class="login-demo" onclick="simulateLogin()">Simulate Login</button>
+            <button class="logout-demo" onclick="simulateLogout()">Simulate Logout</button>
+        </div>
+    </div>
+</body>
+</html>
